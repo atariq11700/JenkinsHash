@@ -1,3 +1,3 @@
 # Jenkins Hash
 
-## Simple Library for using the Jenkins Hash algorithm 
+Implementation of the Jenkins Hash in some different languages.
