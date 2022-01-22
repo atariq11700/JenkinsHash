@@ -13,7 +13,7 @@ uint32_t hash(std::string key) {
         i++;
     }
 
-    unsigned long hash = 0;
+    uint32_t hash = 0;
     for (int i = 0; i < length; i++){
         hash += to_lower(key[i]);
         hash += (hash << 10);
@@ -27,13 +27,14 @@ uint32_t hash(std::string key) {
     return hash;
 }
 
-std::string uint_to_hex_string(const uint32_t &number) {
+std::string uint_to_hex_string(uint32_t number) {
     std::string hex_alphabet = "0123456789abcdef";
     std::string hex_string = "";
 
+    uint32_t dividend = number;
+
     int remainder = 0;
     int result = -1;
-    unsigned long dividend = number;
     int index = 7;
 
     while (result != 0){
